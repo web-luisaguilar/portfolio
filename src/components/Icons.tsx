@@ -1,7 +1,7 @@
 export const ArrowDown = ({ size = '20px', ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`icon icon-tabler icon-tabler-arrow-badge-down-filled ${color}`}
+    className={`icon icon-tabler icon-tabler-arrow-badge-down-filled `}
     width={size}
     height={size}
     viewBox="0 0 24 24"

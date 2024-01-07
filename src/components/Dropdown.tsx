@@ -34,7 +34,7 @@ const Dropdown = ({ options, defaultOption, handleChange }: propTypes) => {
             className="btn flex items-center justify-center gap-4"
             onClick={handleClick}
           >
-            {selected.text} <ArrowDown color="stroke-customTheme-200" />
+            {selected.text} <ArrowDown className="stroke-customTheme-200" />
           </label>
 
           {isOpen && (
