@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-customTheme-50 text-base bg-customTheme-900;
+  /* background: linear-gradient(0deg, rgba(5, 23, 29, 1) 0%, rgba(26, 78, 95, 1) 50%, rgba(5, 23, 29, 1) 100%); */
+  background: radial-gradient(rgba(26, 78, 95, 1) 0%, rgba(5, 23, 29, 1) 100%);
+}
+
+h1 {
+  @apply text-4xl uppercase;
+}
+
+main {
+  @apply m-auto max-w-full lg:w-[1200px] p-8 xl:px-0 xl:py-4 min-h-screen overflow-hidden;
+}
+
+p {
+  @apply max-w-[80ch] text-base md:text-lg;
+}
+strong {
+  @apply font-bold;
+}
+
+.btn {
+  @apply border border-customTheme-300 px-4 py-2 font-semibold text-customTheme-300 flex duration-200 pointerHover;
+}
+.btn:hover {
+  @apply bg-customTheme-950;
+}
+.btn:active {
+  @apply bg-customTheme-900;
+}
+.link {
+  @apply border border-customTheme-600 py-2 px-4  pointerHover;
+}
+.link:hover {
+  @apply bg-customTheme-950;
+}
+.link:active {
+  @apply bg-customTheme-900;
+}
+
+.btn-solid {
+  @apply px-4 py-2 font-semibold flex bg-customTheme-400 text-customTheme-950 pointerHover;
+}
+.btn-solid:hover {
+  @apply bg-customTheme-300;
+}
+.btn-solid:active {
+  @apply bg-customTheme-500;
+}
+.btn-solid:disabled {
+  @apply bg-customTheme-800 text-customTheme-100;
+}
+
+.fadeIn {
+  animation: fadeIn ease-in 600ms;
+}
+
+.fadeOut {
+  animation: fadeOut ease-out 600ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.pointerHover {
+  @apply duration-200 relative;
+}
+
+.pointerHover::after {
+  @apply border border-customTheme-50/30 -top-1 -left-1 absolute hidden  animate-pulse;
+  content: '';
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+}
+
+.pointerHover:hover::after {
+  @apply md:block;
+}
