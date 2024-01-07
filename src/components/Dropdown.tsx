@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import DropdownItem from './DropdownItem'
-import { ArrorwDown } from './Icons'
+import { ArrowDown } from './Icons'
 
 export interface option {
   text: string
@@ -34,7 +34,7 @@ const Dropdown = ({ options, defaultOption, handleChange }: propTypes) => {
             className="btn flex items-center justify-center gap-4"
             onClick={handleClick}
           >
-            {selected.text} <ArrorwDown color="stroke-customTheme-200" />
+            {selected.text} <ArrowDown color="stroke-customTheme-200" />
           </label>
 
           {isOpen && (
