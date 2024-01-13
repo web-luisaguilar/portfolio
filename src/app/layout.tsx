@@ -1,5 +1,6 @@
 import { Montserrat } from 'next/font/google'
 import '@/styles/globals.css'
+import '@/styles/Holi.css'
 import Header from '@/components/Header'
 import BackToTop from '@/components/BackToTop'
 

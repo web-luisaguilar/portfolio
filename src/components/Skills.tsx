@@ -105,7 +105,7 @@ const Skills = () => {
         {skills.map((skill) => (
           <figure
             key={skill.name + '-keySkill'}
-            className="border border-customTheme-700 hover:bg-customTheme-950  flex flex-col items-center justify-center md:justify-between gap-4   w-[150px]  hover:shadow-md hover:shadow-customTheme-700 aspect-square  "
+            className="border border-customTheme-700 rounded-sm hover:bg-customTheme-950  flex flex-col items-center justify-center md:justify-between gap-4   w-[150px]  hover:shadow-md hover:shadow-customTheme-700 aspect-square  "
           >
             <div className="flex flex-col gap-2 py-2 w-full items-center ">
               {skill.img}
@@ -116,7 +116,7 @@ const Skills = () => {
                 href={skill.doc}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-solid w-full md:!flex items-center justify-center !hidden hover:cursor-alias "
+                className="btn-solid !rounded-tr-none !rounded-tl-none w-full md:!flex items-center justify-center !hidden hover:cursor-alias "
               >
                 <small>Documentacion</small>
               </Link>

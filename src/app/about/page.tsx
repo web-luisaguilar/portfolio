@@ -1,8 +1,24 @@
+import About from '@/components/about/About'
+
 export const metadata = {
-  title: 'Luis Aguilar | Acerca',
+  title: 'Acerca | Luis Aguilar',
 }
+
+const Loading = () => {
+  console.log('cargando...')
+  return <p>Loading...</p>
+}
+
 const AboutPage = () => {
-  return <main>AboutPage</main>
+  return (
+    <>
+      <main className={`fadeIn`}>
+        <article>
+          <About />
+        </article>
+      </main>
+    </>
+  )
 }
 
 export default AboutPage

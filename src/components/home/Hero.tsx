@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="min-h-screen items-center flex fadeIn">
+    <section className="min-h-[90dvh] items-center flex fadeIn">
       <div className="lg:flex items-center gap-8 font-light justify-center md:justify-between w-full">
         <Link href={'/'} className="flex items-center justify-center my-4   duration-200 hover:-translate-y-4">
           <img
