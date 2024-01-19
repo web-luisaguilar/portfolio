@@ -13,17 +13,6 @@ const ThemeBlue = {
   '900': '#1a4e5f',
   '950': '#05171d',
 }
-const ThemeGreen = {
-  '900': '#18181b',
-  '800': '#003b3d',
-  '700': '#006666',
-  '600': '#007777',
-  '500': '#009794',
-  '400': '#00bfb9',
-  '300': '#00eddf',
-  '200': '#00fff8',
-  '100': '#31fdff',
-}
 
 const config: Config = {
   content: [
@@ -41,8 +30,8 @@ const config: Config = {
         transparent: 'transparent',
         current: 'currentColor',
         customTheme: ThemeBlue,
-        white: '#ecfffd',
-        whitesmoke: '#7bffff',
+        white: '#edfefe',
+        whitesmoke: '#d1f9fc',
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',

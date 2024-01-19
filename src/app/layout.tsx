@@ -3,6 +3,7 @@ import '@/styles/globals.css'
 import '@/styles/Holi.css'
 import Header from '@/components/Header'
 import BackToTop from '@/components/BackToTop'
+import Footer from '@/components/Footer'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <BackToTop />
+        <Footer />
       </body>
     </html>
   )

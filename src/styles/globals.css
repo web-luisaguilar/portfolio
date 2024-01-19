@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  min-width: 0;
+  font: inherit;
+}
 
 *,
 ::after,
@@ -11,15 +15,35 @@
 }
 
 body {
-  @apply text-customTheme-50 text-base;
+  @apply text-customTheme-50/80 text-base font-light;
   background: rgb(5, 23, 29);
-  background: linear-gradient(
+  /* background:   linear-gradient(120deg, rgba(5, 23, 29, 1) 5%, rgba(26, 78, 95, 1) 23%, rgba(5, 23, 29, 1) 90%); */
+
+  /* background: linear-gradient(
     0deg,
     rgba(5, 23, 29, 1) 0%,
     rgba(26, 78, 95, 1) 25%,
     rgba(26, 78, 95, 1) 80%,
     rgba(5, 23, 29, 1) 100%
-  );
+  ); */
+  min-height: 100dvh;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 article {
@@ -27,26 +51,27 @@ article {
 }
 
 h1 {
-  @apply text-4xl uppercase my-4 font-bold text-center lg:text-start;
+  @apply text-2xl uppercase my-4 font-bold text-center lg:text-start;
 }
 
 h2 {
-  @apply text-2xl font-semibold normal-case mt-4 mb-0 text-customTheme-500;
+  @apply text-xl font-semibold normal-case mt-4 mb-0 text-customTheme-500 underline-offset-2 decoration-customTheme-300/20;
 }
 h3 {
-  @apply text-xl font-medium mt-4 mb-0 text-customTheme-600;
+  @apply text-lg font-medium mt-4 mb-0 text-customTheme-600;
 }
 h4 {
   @apply text-base font-normal mt-4 mb-0 text-customTheme-700;
 }
 
 main {
-  @apply m-auto max-w-full lg:w-[1200px] xl:w-[1350px] p-8 xl:px-0 xl:py-4 min-h-screen overflow-hidden;
+  @apply m-auto max-w-full lg:w-[1200px] xl:w-[1350px] p-8 xl:px-0 xl:py-4;
+  min-height: calc(100dvh - 160px);
 }
 
 p {
-  @apply max-w-[80ch] text-base md:text-lg font-extralight;
-  text-wrap: wrap;
+  @apply max-w-[80ch] text-base  font-light underline-offset-2 decoration-customTheme-300/20;
+  text-wrap: pretty;
 }
 strong {
   @apply font-bold;
@@ -60,19 +85,19 @@ button {
   @apply border border-customTheme-300/80 rounded-sm px-4 py-2 font-semibold text-customTheme-300 flex duration-200 pointerHover items-center justify-center shadow-sm shadow-customTheme-950;
 }
 .btn:hover {
-  @apply bg-customTheme-950;
+  @apply bg-customTheme-900;
 }
 .btn:active {
-  @apply bg-customTheme-900;
+  @apply bg-customTheme-800;
 }
 .link {
   @apply border border-customTheme-600 rounded-sm py-2 px-4  pointerHover;
 }
 .link:hover {
-  @apply bg-customTheme-950;
+  @apply bg-customTheme-900;
 }
 .link:active {
-  @apply bg-customTheme-900;
+  @apply bg-customTheme-800;
 }
 
 .btn-solid {
@@ -87,9 +112,8 @@ button {
 .btn-solid:disabled {
   @apply bg-customTheme-800 text-customTheme-100;
 }
-
 .card {
-  @apply rounded-sm bg-customTheme-950 bg-gradient-to-b  from-customTheme-700 to-customTheme-900  w-[325px]  h-[500px] p-8 flex flex-col justify-between border border-customTheme-900/80 hover:border-customTheme-700/80 hover:shadow-md hover:shadow-customTheme-300/40;
+  @apply rounded-sm bg-customTheme-900/25 w-[325px]  h-[500px] p-8 flex flex-col justify-between border border-customTheme-300/50 shadow-lg  hover:shadow-md hover:shadow-customTheme-50/20;
 }
 
 .fadeIn {
@@ -119,7 +143,7 @@ button {
 }
 
 .pointerHover {
-  @apply duration-200 relative transform-cpu;
+  @apply duration-200 relative;
 }
 .pointerHover::after {
   @apply border border-customTheme-50/30 rounded-sm -top-1 -left-1 absolute hidden;
@@ -130,6 +154,10 @@ button {
 
 .pointerHover:hover::after {
   @apply md:block;
+}
+
+.hypervinculo {
+  @apply hover:underline underline-offset-2 decoration-customTheme-300/20;
 }
 
 ul ul {
@@ -158,4 +186,54 @@ blockquote:before {
 
 hr {
   @apply my-4;
+}
+
+form {
+  @apply rounded-sm text-sm font-normal;
+}
+
+form ::placeholder {
+  @apply text-customTheme-50/10 text-sm;
+}
+
+fieldset {
+  @apply rounded-sm;
+}
+
+input {
+  @apply bg-customTheme-900/20 px-2 py-1 text-sm  outline-none rounded-sm;
+}
+label {
+  @apply flex items-center justify-start text-sm  font-semibold;
+}
+textarea {
+  @apply w-full bg-customTheme-900/20 text-base  p-2 resize-none rounded-sm outline-none;
+}
+
+.animated-bg {
+  background: linear-gradient(-45deg, rgba(5, 23, 29, 0.75) 30%, rgba(5, 23, 29, 0.5) 50%, rgba(5, 23, 29, 0.75) 70%);
+  background-size: 600%;
+  animation: bgAnimation 2500ms ease infinite;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.test {
+  rotate: 20deg;
+}
+
+@keyframes delfinAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(300deg);
+  }
 }

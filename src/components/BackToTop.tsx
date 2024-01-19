@@ -30,11 +30,11 @@ const BackToTop = () => {
 
   return (
     <>
-      {scroll && (
+      {scroll !== 0 && (
         <button
           id="totop"
           className={` btn !fixed  !bottom-4 !right-4 !p-4 overflow-hidden !duration-700 ${
-            scroll > 950 ? 'translate-y-0 animate-pulse ' : ' translate-y-[200px]  '
+            scroll > 950 ? 'translate-y-0 animate-pulse ' : ' translate-y-[200px] '
           }`}
           onClick={toTop}
         >

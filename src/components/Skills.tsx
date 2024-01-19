@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import {
   CssIcon,
-  DockerIcon,
   GitIcon,
   GithubIcon,
   JsIcon,
@@ -49,7 +48,7 @@ const Skills = () => {
     },
     {
       name: 'MySQL',
-      img: <MysqlIcon className={customClass} size={imgSize} />,
+      img: <MysqlIcon className={customClass + ' ' + 'rotate-10'} size={imgSize} />,
       doc: 'https://dev.mysql.com/doc/',
     },
     {

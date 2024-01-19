@@ -23,7 +23,7 @@ const Hero = () => {
                 <strong> biblioteca </strong>
               </Link>
               donde encontraras distintos ejemplos de componentes web, hasta una seccion de{' '}
-              <Link href={'/about'}>
+              <Link href={'/about'} className="hover:text-customTheme-300">
                 <strong>acerca </strong>
               </Link>
               donde podras saber un poco mas de mi.

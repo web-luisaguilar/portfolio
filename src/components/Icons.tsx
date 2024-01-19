@@ -478,7 +478,7 @@ export const DiscordIcon = ({ size = '20px', ...props }) => (
   </svg>
 )
 
-export const Facebook = ({ size = '20px', ...props }) => (
+export const FacebookIcon = ({ size = '20px', ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="icon icon-tabler icon-tabler-brand-facebook"
@@ -640,5 +640,42 @@ export const Tiktok = ({ size = '20px', ...props }) => (
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+  </svg>
+)
+
+export const LoadingIcon = ({ size = '20px', ...props }) => (
+  // By Sam Herbert (@sherb), for everyone.More @http://goo.gl/7AJzbL
+  <svg width={size} height={size} viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <defs>
+      <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+        <stop stopColor="#fff" stopOpacity="0" offset="0%" />
+        <stop stopColor="#fff" stopOpacity=".631" offset="63.146%" />
+        <stop stopColor="#fff" offset="100%" />
+      </linearGradient>
+    </defs>
+    <g fill="none" fillRule="evenodd">
+      <g transform="translate(1 1)">
+        <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" strokeWidth="2">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 18 18"
+            to="360 18 18"
+            dur="0.9s"
+            repeatCount="indefinite"
+          />
+        </path>
+        <circle fill="#fff" cx="36" cy="18" r="1">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 18 18"
+            to="360 18 18"
+            dur="0.9s"
+            repeatCount="indefinite"
+          />
+        </circle>
+      </g>
+    </g>
   </svg>
 )

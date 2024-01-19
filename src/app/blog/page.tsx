@@ -1,22 +1,17 @@
-import ArticleGrid from '@/components/blog/ArticleGrid'
-import { MetadataPost } from '@/types'
-import { promises as fs } from 'fs'
-import matter from 'gray-matter'
-import path from 'path'
-import { Suspense } from 'react'
+import ArticleGridSkeleton from '@/components/blog/ArticleGridSkeleton'
+import dynamic from 'next/dynamic'
 
 export const metadata = {
   title: 'Blog | Luis Aguilar',
 }
-const page = async () => {
+
+const ArticleGrid = dynamic(() => import('@/components/blog/ArticleGrid'), { loading: () => <ArticleGridSkeleton /> })
+
+const page = () => {
   return (
     <main>
       <h1>Articulos</h1>
-      <Suspense fallback={<p>Cargando...</p>}>
-        <ArticleGrid
-          metadataPosts={[{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}] as MetadataPost[]}
-        />
-      </Suspense>
+      <ArticleGrid />
     </main>
   )
 }
