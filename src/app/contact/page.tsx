@@ -1,4 +1,3 @@
-import { Facebook } from '@/components/Icons'
 import ContactForm from '@/components/contact/ContactForm'
 import SocialMedias from '@/components/contact/SocialMedias'
 
