@@ -12,7 +12,7 @@ dependencies:
     specifier: 14.0.4
     version: 14.0.4(@mdx-js/loader@3.0.0)
   '@reduxjs/toolkit':
-    specifier: ^2.2.5
+    specifier: 2.2.5
     version: 2.2.5(react-redux@9.1.2)(react@18.2.0)
   gray-matter:
     specifier: 4.0.3

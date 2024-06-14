@@ -10,13 +10,10 @@ const ProyectGrid = async () => {
     <section className="grid-mid">
       {proyects.map(({ mdxMetadata }, index) => {
         return (
-          <>
-            <ProyectCard
-              mdxMetadata={mdxMetadata as MetadataPost}
-              key={index.toString() + mdxMetadata.title + 'key-grid'}
-            ></ProyectCard>
+          <div key={index.toString() + mdxMetadata.title + 'key-grid'}>
+            <ProyectCard mdxMetadata={mdxMetadata as MetadataPost}></ProyectCard>
             <Modal />
-          </>
+          </div>
         )
       })}
     </section>
