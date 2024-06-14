@@ -6,12 +6,12 @@ const ContactForm = () => {
       method="POST"
       className="max-w-[80ch] mx-auto "
     >
-      <fieldset className="flex w-full gap-y-4 justify-center md:justify-between border border-customTheme-500/20 p-4 flex-wrap">
+      <fieldset className="flex w-full gap-y-4 justify-center md:justify-between border border-customTheme-500/50 p-4 flex-wrap">
         <legend className=" text-center md:text-start md:pl-0 px-4 md:pr-4">
-          <h2 className="!p-0 !m-0">Datos de Contacto</h2>
+          <h2 className="!p-0 !m-0">Contacta conmigo</h2>
         </legend>
         <div className="flex flex-col w-full lg:w-[37ch]">
-          <label htmlFor="email">Correo</label>
+          <label htmlFor="email">Correo de contacto</label>
           <input
             type="email"
             id="email"

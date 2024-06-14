@@ -5,4 +5,6 @@ export interface MetadataPost {
   category: string
   languages?: string[]
   date: string
+  github?: string
+  preview?: string
 }

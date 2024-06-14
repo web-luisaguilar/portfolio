@@ -21,7 +21,7 @@ const SocialMediaLinks = [
 
 const SocialMedias = () => {
   return (
-    <section className="py-8">
+    <section className="py-8 flex justify-center">
       <div className="flex items-center gap-4">
         {SocialMediaLinks.map((media) => (
           <Link

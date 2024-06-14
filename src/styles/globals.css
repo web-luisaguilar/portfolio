@@ -14,9 +14,33 @@
   padding: 0;
 }
 
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+article {
+  @apply max-w-[84ch] mx-auto;
+}
+
+blockquote {
+  @apply bg-customTheme-950 px-2 relative mx-12 my-4 max-w-[80ch];
+}
+
+blockquote p {
+  @apply text-sm text-customTheme-300;
+}
+
+blockquote:before {
+  @apply w-1 inline-block -top-0 -left-1 h-full bg-customTheme-900 absolute;
+  content: '';
+}
+
 body {
-  @apply text-customTheme-50/80 text-base font-light;
-  background: rgb(5, 23, 29);
+  @apply text-customTheme-50/80 text-base font-light bg-customTheme-950;
   /* background:   linear-gradient(120deg, rgba(5, 23, 29, 1) 5%, rgba(26, 78, 95, 1) 23%, rgba(5, 23, 29, 1) 90%); */
 
   /* background: linear-gradient(
@@ -29,12 +53,30 @@ body {
   min-height: 100dvh;
 }
 
-img,
-video,
-svg {
-  display: block;
-  height: auto;
-  max-width: 100%;
+button {
+  @apply btn;
+}
+
+fieldset {
+  @apply rounded-sm;
+}
+
+form {
+  @apply rounded-sm text-sm font-normal;
+}
+
+form ::placeholder {
+  @apply text-customTheme-50/20 text-sm;
+}
+
+main {
+  @apply m-auto max-w-full xl:w-[1200px] 2xl:w-[1350px] p-8 xl:px-0 xl:py-4;
+  min-height: calc(100dvh - 160px);
+}
+
+p {
+  @apply max-w-[80ch] text-base  font-light underline-offset-2 decoration-customTheme-300/20;
+  text-wrap: pretty;
 }
 
 h1,
@@ -46,74 +88,99 @@ h6 {
   text-wrap: balance;
 }
 
-article {
-  @apply max-w-[84ch] mx-auto;
-}
-
 h1 {
-  @apply text-2xl uppercase my-4 font-bold text-center lg:text-start;
+  @apply text-xl lg:text-2xl uppercase my-4 font-bold text-center lg:text-start;
 }
 
 h2 {
-  @apply text-xl font-semibold normal-case mt-4 mb-0 text-customTheme-500 underline-offset-2 decoration-customTheme-300/20;
+  @apply text-lg lg:text-xl font-semibold normal-case mt-4 mb-0 text-customTheme-500 underline-offset-2 decoration-customTheme-300/20;
 }
+
 h3 {
-  @apply text-lg font-medium mt-4 mb-0 text-customTheme-600;
+  @apply text-base lg:text-lg font-medium mt-4 mb-0 text-customTheme-600;
 }
+
 h4 {
   @apply text-base font-normal mt-4 mb-0 text-customTheme-700;
 }
 
-main {
-  @apply m-auto max-w-full lg:w-[1200px] xl:w-[1350px] p-8 xl:px-0 xl:py-4;
-  min-height: calc(100dvh - 160px);
+ul ul {
+  list-style: circle;
 }
 
-p {
-  @apply max-w-[80ch] text-base  font-light underline-offset-2 decoration-customTheme-300/20;
-  text-wrap: pretty;
+ul {
+  @apply pl-5 list-outside text-sm font-extralight;
+  list-style-type: disc;
 }
+
+header ul {
+  @apply text-base font-normal;
+  list-style: none;
+}
+
+hr {
+  @apply my-4;
+}
+
+input {
+  @apply bg-customTheme-900/20 px-4 py-2 text-sm  outline-none rounded-sm;
+}
+
+label {
+  @apply flex items-center justify-start text-sm  font-semibold;
+}
+
 strong {
   @apply font-bold;
 }
 
-button {
-  @apply btn;
+textarea {
+  @apply w-full bg-customTheme-900/20 text-base  p-4 resize-none rounded-sm outline-none;
+}
+
+.animated-bg {
+  background: linear-gradient(-45deg, rgba(5, 23, 29, 0.75) 30%, rgba(5, 23, 29, 0.5) 50%, rgba(5, 23, 29, 0.75) 70%);
+  background-size: 600%;
+  animation: bgAnimation 2500ms ease infinite;
 }
 
 .btn {
   @apply border border-customTheme-300/80 rounded-sm px-4 py-2 font-semibold text-customTheme-300 flex duration-200 pointerHover items-center justify-center shadow-sm shadow-customTheme-950;
 }
+
 .btn:hover {
-  @apply bg-customTheme-900;
+  @apply bg-customTheme-900 cursor-pointer;
 }
+
 .btn:active {
-  @apply bg-customTheme-800;
-}
-.link {
-  @apply border border-customTheme-600 rounded-sm py-2 px-4  pointerHover;
-}
-.link:hover {
-  @apply bg-customTheme-900;
-}
-.link:active {
   @apply bg-customTheme-800;
 }
 
 .btn-solid {
   @apply px-4 py-2 font-semibold flex bg-customTheme-400 text-customTheme-950 pointerHover items-center rounded-sm;
 }
+
 .btn-solid:hover {
   @apply bg-customTheme-300;
 }
+
 .btn-solid:active {
   @apply bg-customTheme-500;
 }
+
 .btn-solid:disabled {
   @apply bg-customTheme-800 text-customTheme-100;
 }
+
 .card {
-  @apply rounded-sm bg-customTheme-900/25 w-[325px]  h-[500px] p-8 flex flex-col justify-between border border-customTheme-300/50 shadow-lg  hover:shadow-md hover:shadow-customTheme-50/20;
+  @apply rounded-sm bg-customTheme-900/25  flex flex-col justify-between border border-customTheme-300/50 shadow-lg  hover:shadow-md hover:shadow-customTheme-50/20;
+}
+.card-sm {
+  @apply w-[325px]  h-[500px] p-8;
+}
+
+.card-md {
+  @apply max-w-[500px] h-[450px] p-4;
 }
 
 .fadeIn {
@@ -124,27 +191,44 @@ button {
   animation: fadeOut ease-out 600ms;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
+.grid-mid {
+  @apply grid grid-cols-[repeat(auto-fill,400px)] gap-4 items-center justify-center 2xl:justify-between;
 }
 
+.grid-small {
+  @apply grid grid-cols-[repeat(auto-fill,325px)] gap-4 items-center justify-center 2xl:justify-between;
+}
+.hypervinculo {
+  @apply hover:underline underline-offset-2 decoration-customTheme-300/20;
+}
+
+.link {
+  @apply border border-customTheme-600 rounded-sm py-2 px-4  pointerHover;
+}
+
+.link:hover {
+  @apply bg-customTheme-900;
+}
+
+.link:active {
+  @apply bg-customTheme-800;
+}
+
+.menu-list {
+  opacity: 100%;
+}
+
+.menu-list:hover {
+  opacity: 80%;
+}
+
+.modalAnimation {
+  animation: modalIn ease 450ms;
+}
 .pointerHover {
   @apply duration-200 relative;
 }
+
 .pointerHover::after {
   @apply border border-customTheme-50/30 rounded-sm -top-1 -left-1 absolute hidden;
   content: '';
@@ -154,66 +238,6 @@ button {
 
 .pointerHover:hover::after {
   @apply md:block;
-}
-
-.hypervinculo {
-  @apply hover:underline underline-offset-2 decoration-customTheme-300/20;
-}
-
-ul ul {
-  list-style: circle;
-}
-
-ul {
-  @apply pl-5 list-outside text-sm font-extralight;
-  list-style-type: square;
-}
-header ul {
-  @apply text-base font-normal;
-  list-style: none;
-}
-
-blockquote {
-  @apply bg-customTheme-950 px-2 relative mx-12 my-4 max-w-[80ch];
-}
-blockquote p {
-  @apply text-sm text-customTheme-300;
-}
-blockquote:before {
-  @apply w-1 inline-block -top-0 -left-1 h-full bg-customTheme-900 absolute;
-  content: '';
-}
-
-hr {
-  @apply my-4;
-}
-
-form {
-  @apply rounded-sm text-sm font-normal;
-}
-
-form ::placeholder {
-  @apply text-customTheme-50/10 text-sm;
-}
-
-fieldset {
-  @apply rounded-sm;
-}
-
-input {
-  @apply bg-customTheme-900/20 px-2 py-1 text-sm  outline-none rounded-sm;
-}
-label {
-  @apply flex items-center justify-start text-sm  font-semibold;
-}
-textarea {
-  @apply w-full bg-customTheme-900/20 text-base  p-2 resize-none rounded-sm outline-none;
-}
-
-.animated-bg {
-  background: linear-gradient(-45deg, rgba(5, 23, 29, 0.75) 30%, rgba(5, 23, 29, 0.5) 50%, rgba(5, 23, 29, 0.75) 70%);
-  background-size: 600%;
-  animation: bgAnimation 2500ms ease infinite;
 }
 
 @keyframes bgAnimation {
@@ -235,5 +259,25 @@ textarea {
   }
   100% {
     transform: rotate(300deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    @apply h-5/6;
   }
 }

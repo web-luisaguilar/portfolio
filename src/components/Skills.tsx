@@ -100,7 +100,8 @@ const Skills = () => {
 
   return (
     <section className="my-4">
-      <div className="grid grid-cols-[repeat(auto-fill,150px)] gap-4 items-center justify-center sm:justify-between">
+      <h2 className="text-center py-8">SKILLS</h2>
+      <div className="grid grid-cols-[repeat(auto-fill,150px)] items-center justify-between lg:px-8 gap-y-4">
         {skills.map((skill) => (
           <figure
             key={skill.name + '-keySkill'}

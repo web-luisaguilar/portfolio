@@ -6,9 +6,9 @@ interface propTypes {
   params: { slug: string }
 }
 const ArticleBlog = async ({ params }: propTypes) => {
+  const slug = decodeURIComponent(params.slug)
   try {
-    const { mdxContent } = await getArticle({ slug: params.slug, type: 'blog' })
-    console.log(mdxContent)
+    const { mdxContent } = await getArticle({ slug, type: 'blog' })
     return (
       <main>
         <Article mdxSource={mdxContent} />
@@ -22,7 +22,7 @@ const ArticleBlog = async ({ params }: propTypes) => {
 export async function generateStaticParams() {
   const slugs = await getAllArticlesSlug({ type: 'blog' })
   return slugs.map((slug) => ({
-    slug: slug.replace('.mdx', ''),
+    slug: decodeURIComponent(slug.replace('.mdx', '')),
   }))
 }
 

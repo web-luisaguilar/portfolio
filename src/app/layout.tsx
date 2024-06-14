@@ -4,6 +4,7 @@ import '@/styles/Holi.css'
 import Header from '@/components/Header'
 import BackToTop from '@/components/BackToTop'
 import Footer from '@/components/Footer'
+import StoreProvider from './StoreProvider'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body className={montserrat.className}>
         <Header />
-        {children}
+        <StoreProvider>{children}</StoreProvider>
         <BackToTop />
         <Footer />
       </body>

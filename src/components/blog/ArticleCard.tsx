@@ -13,9 +13,9 @@ const defaultPost = {
 }
 
 const ArticleCard = ({ metadataPost }: { metadataPost: MetadataPost }) => {
-  const postLink = `/blog/${metadataPost.title}`
+  const postLink = `/blog/${encodeURIComponent(metadataPost.title)}`
   return (
-    <div className="  card">
+    <div className="  card card-sm">
       <div className=" flex flex-col overflow-hidden">
         <div className="flex items-center justify-center  w-full overflow-hidden  aspect-video mb-2 flex-shrink-0 shadow-md  rounded-sm bg-customTheme-950 ">
           <Link href={postLink}>
@@ -33,7 +33,7 @@ const ArticleCard = ({ metadataPost }: { metadataPost: MetadataPost }) => {
           <strong>Categoria: </strong> {metadataPost.category || defaultPost.category}
         </h3>
         {metadataPost.languages && (
-          <div className="flex gap-2 my-1 flex-wrap">
+          <div className="flex gap-2 my-1 ">
             {metadataPost.languages?.slice(0, 4).map((language) => {
               return (
                 <span

@@ -6,7 +6,7 @@ const ArticleGrid = async () => {
   const metadataPosts = await getAllArticles({ type: 'blog' })
 
   return (
-    <section className="grid grid-cols-[repeat(auto-fill,325px)] gap-4 items-center justify-center lg:justify-between">
+    <section className="grid-small">
       {metadataPosts.map(({ mdxMetadata }, index) => {
         return (
           <ArticleCard

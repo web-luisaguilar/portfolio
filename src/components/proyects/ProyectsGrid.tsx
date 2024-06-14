@@ -1,13 +1,15 @@
 import { getAllArticles } from '@/actions/blog/mdxActions'
 import React from 'react'
 import ProyectCard from './ProyectCard'
+import { MetadataPost } from '@/types'
 
 const ProyectsGrid = async () => {
   const metadataPosts = await getAllArticles({ type: 'proyects' })
+
   return (
-    <section className="grid grid-cols-[repeat(auto-fill,400px)] gap-4 items-center justify-center lg:justify-between">
+    <section className="grid-mid">
       {metadataPosts.map(({ mdxMetadata }, index) => {
-        return <ProyectCard key={mdxMetadata.title} />
+        return <ProyectCard metadataPost={mdxMetadata as MetadataPost} key={mdxMetadata.title + index.toString()} />
       })}
     </section>
   )

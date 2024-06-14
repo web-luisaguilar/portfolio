@@ -7,8 +7,9 @@ import { useState } from 'react'
 const routes = [
   { name: 'Inicio', path: '/' },
   // { name: 'Biblioteca', path: '/library' },
-  { name: 'Proyectos', path: '/proyects' },
-  { name: 'Blog', path: '/blog' },
+  // { name: 'Proyectos', path: '/proyects' },
+  // { name: 'Blog', path: '/blog' },
+  { name: 'Portafolio', path: '/portfolio' },
   { name: 'Acerca', path: '/about' },
   { name: 'Contacto', path: '/contact' },
 ]
@@ -20,7 +21,7 @@ const Header = () => {
   return (
     <header className="  sticky md:flex  top-0 left-0 z-40 lg:h-[80px] md:justify-center bg-customTheme-950 shadow-sm shadow-customTheme-50/5">
       <div
-        className={`py-4 md:px-8 md:relative  xl:px-0 absolute md:flex w-full items-center lg:max-w-[1200px] xl:max-w-[1350px] bg-customTheme-950 md:bg-customTheme-950/90 xl:bg-transparent  h-screen md:h-fit lg:h-[80px] gap-4 duration-200 ${
+        className={`py-4 md:px-8 md:relative 2xl:px-0 absolute md:flex w-full items-center lg:max-w-[1200px] xl:max-w-[1350px] bg-customTheme-950 md:bg-customTheme-950/90 xl:bg-transparent  h-screen md:h-fit lg:h-[80px] gap-4 duration-200 ${
           menuOpen ? 'translate-x-0' : '-translate-x-full md:-translate-x-0'
         }`}
       >
