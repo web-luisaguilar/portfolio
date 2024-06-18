@@ -53,6 +53,10 @@ body {
   min-height: 100dvh;
 }
 
+hr {
+  @apply border border-customTheme-900 opacity-10;
+}
+
 button {
   @apply btn;
 }
@@ -89,7 +93,7 @@ h6 {
 }
 
 h1 {
-  @apply text-xl lg:text-2xl uppercase my-4 font-bold text-center lg:text-start;
+  @apply text-xl lg:text-2xl uppercase my-4 font-bold text-center;
 }
 
 h2 {

@@ -29,7 +29,11 @@ const ProyectCard = ({ mdxMetadata }: { mdxMetadata: MetadataPost }) => {
         </p>
         <div className="flex justify-between">
           <button onClick={handleClick}>Vista Rapida</button>
-
+          {mdxMetadata.preview && (
+            <Link href={mdxMetadata.preview} className="btn hover:cursor-alias" target="_blank" rel="noreferrer">
+              Visitar
+            </Link>
+          )}
           {mdxMetadata.github && (
             <Link href={mdxMetadata.github} className="btn" target="_blank" rel="noreferrer">
               Github

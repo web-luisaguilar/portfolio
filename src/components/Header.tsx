@@ -10,6 +10,7 @@ const routes = [
   // { name: 'Proyectos', path: '/proyects' },
   // { name: 'Blog', path: '/blog' },
   { name: 'Portafolio', path: '/portfolio' },
+  // { name: 'Servicios', path: '/services' },
   { name: 'Acerca', path: '/about' },
   { name: 'Contacto', path: '/contact' },
 ]

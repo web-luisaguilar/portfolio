@@ -3,11 +3,10 @@ import ProyectCard from './ProyectCard'
 import { MetadataPost } from '@/types'
 import Modal from '../Modal'
 
-const ProyectGrid = async () => {
-  const proyects = await getAllArticles({ type: 'portfolio' })
-
+const MiniProyectGrid = async () => {
+  const proyects = await getAllArticles({ type: 'mini-projects' })
   return (
-    <section className="grid-mid ">
+    <section className="grid-mid">
       {proyects.map(({ mdxMetadata }, index) => {
         return (
           <div key={index.toString() + mdxMetadata.title + 'key-grid'}>
@@ -20,4 +19,4 @@ const ProyectGrid = async () => {
   )
 }
 
-export default ProyectGrid
+export default MiniProyectGrid

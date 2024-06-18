@@ -20,12 +20,12 @@ const Hero = () => {
             </p>
           </div>
           <br />
-          <div className="flex flex-col md:flex-row  w-auto justify-between float-end gap-4">
+          <div className="flex flex-col md:flex-row  w-auto justify-between float-end gap-4 ">
             <Link className="link" href={'/about'}>
               Mas Acerca de Mi
             </Link>
             <Link className="btn-solid" href={'/contact'}>
-              Descarga mi CV / Contacto
+              Contactame
             </Link>
           </div>
         </div>

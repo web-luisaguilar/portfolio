@@ -22,13 +22,13 @@ const Modal = () => {
     return (
       <>
         <div
-          className="absolute top-0 left-0 z-50 bg-black w-full h-full opacity-40 flex justify-center items-center "
+          className="fixed top-0 left-0 z-50 bg-black w-full h-full opacity-40 flex justify-center items-center "
           onClick={handleClick}
         ></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-5/6 h-5/6 flex justify-center items-center bg-customTheme-900/30 modalAnimation">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-5/6 h-5/6 flex justify-center items-center bg-customTheme-900/30 modalAnimation">
           {content && <div className="relative w-full h-full ">{content as ReactNode}</div>}
         </div>
-        <div className="absolute top-0 left-0 z-50 m-8 bg-customTheme-950  ">
+        <div className="fixed top-0 left-0 z-50 m-8 bg-customTheme-950  ">
           <button className="aspect-square btn-solid" onClick={handleClick}>
             <IconClose />
           </button>
