@@ -12,7 +12,7 @@ const ProyectCard = ({ mdxMetadata }: { mdxMetadata: MetadataPost }) => {
   }
   return (
     <>
-      <div className="card card-md opacity-80 hover:opacity-100">
+      <div className="card card-md opacity-100 lg:opacity-50 hover:opacity-100">
         <div className=" overflow-hidden hover:cursor-pointer" onClick={handleClick}>
           <img
             className=" aspect-video w-full  scale-110 hover:scale-100 duration-200"
@@ -35,7 +35,7 @@ const ProyectCard = ({ mdxMetadata }: { mdxMetadata: MetadataPost }) => {
             </Link>
           )}
           {mdxMetadata.github && (
-            <Link href={mdxMetadata.github} className="btn" target="_blank" rel="noreferrer">
+            <Link href={mdxMetadata.github} className="btn !cursor-alias" target="_blank" rel="noreferrer">
               Github
             </Link>
           )}

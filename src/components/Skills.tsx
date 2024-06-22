@@ -118,7 +118,7 @@ const Skills = () => {
                 rel="noreferrer"
                 className="btn-solid !rounded-tr-none !rounded-tl-none w-full md:!flex items-center justify-center !hidden hover:cursor-alias "
               >
-                <small>Documentacion</small>
+                <small>Docs</small>
               </Link>
             )}
           </figure>

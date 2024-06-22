@@ -9,12 +9,12 @@ const PortfolioPage = () => {
       <h1 className="text-center">Portafolio de proyectos</h1>
       <br />
       <br />
-      <h2>Maquetas de paginas Web</h2>
+      <h2 className="text-center">Maquetas de paginas Web</h2>
       <hr />
       <ProyectGrid />
       <br />
       <br />
-      <h2>Mini Proyectos</h2>
+      <h2 className="text-center">Mini Proyectos</h2>
       <hr />
       <MiniProyectGrid />
     </main>

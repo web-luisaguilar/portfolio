@@ -20,9 +20,9 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="  sticky md:flex  top-0 left-0 z-40 lg:h-[80px] md:justify-center bg-customTheme-950 shadow-sm shadow-customTheme-50/5">
+    <header className="  sticky md:flex  top-0 left-0 z-40 lg:h-[80px] md:justify-center bg-blackBlue shadow-sm shadow-customTheme-300/50">
       <div
-        className={`py-4 md:px-8 md:relative 2xl:px-0 absolute md:flex w-full items-center lg:max-w-[1200px] xl:max-w-[1350px] bg-customTheme-950 md:bg-customTheme-950/90 xl:bg-transparent  h-screen md:h-fit lg:h-[80px] gap-4 duration-200 ${
+        className={`py-4 md:px-8 md:relative 2xl:px-0 absolute md:flex w-full items-center lg:max-w-[1200px] xl:max-w-[1350px] bg-blackBlue h-screen md:h-fit lg:h-[80px] gap-4 duration-200 ${
           menuOpen ? 'translate-x-0' : '-translate-x-full md:-translate-x-0'
         }`}
       >
@@ -47,7 +47,7 @@ const Header = () => {
               <li key={route.name + 'test'}>
                 <Link
                   className={`flex items-center justify-center hover:text-customTheme-300 px-4 py-6 md:py-2  border-b hover:border-customTheme-900 md:hover:border-none !duration-100 border-y-customTheme-500/10 md:border-none  ${
-                    pathName === route.path && 'text-customTheme-700 '
+                    pathName === route.path && 'text-customTheme-500 font-bold'
                   }`}
                   key={`${index}-${route.name}-route`}
                   href={route.path}
@@ -63,10 +63,9 @@ const Header = () => {
         </nav>
       </div>
 
+      {/* Header mobile */}
       <div
-        className={`md:!hidden  bg-customTheme-950/70  items-center justify-between px-4 py-4 ${
-          menuOpen ? '!hidden' : '!flex'
-        } `}
+        className={`md:!hidden  bg-blackBlue items-center justify-between px-4 py-4 ${menuOpen ? '!hidden' : '!flex'} `}
       >
         <Link
           href="/"
