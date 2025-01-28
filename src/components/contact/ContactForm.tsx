@@ -2,7 +2,7 @@ const ContactForm = () => {
   return (
     <form
       target="_blank"
-      action="https://formsubmit.co/web.luisaguilar@gmail.com"
+      action="https://formsubmit.co/42283fdc0c42015622354c63c654a6b3"
       method="POST"
       className="max-w-[80ch] mx-auto "
     >
@@ -23,11 +23,25 @@ const ContactForm = () => {
         </div>
         <div className="flex flex-col w-full lg:w-[37ch]">
           <label htmlFor="name">Nombre</label>
-          <input type="text" id="name" name="name" required autoComplete="off" placeholder="Luis Eduardo"></input>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autoComplete="off"
+            placeholder="Luis Eduardo"
+          ></input>
         </div>
         <div className="flex flex-col w-full lg:w-[37ch]">
           <label htmlFor="subject">Asunto</label>
-          <input type="text" id="subject" name="subject" required autoComplete="off" placeholder="Invitacion"></input>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            autoComplete="off"
+            placeholder="Invitacion"
+          ></input>
         </div>
         <div className="flex flex-col w-full ">
           <label htmlFor="message">Mensaje</label>
@@ -39,7 +53,10 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn-solid w-full ">
+        <button
+          type="submit"
+          className="btn-solid w-full "
+        >
           Enviar Mensaje
         </button>
       </fieldset>
