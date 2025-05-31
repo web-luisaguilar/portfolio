@@ -12,7 +12,7 @@ const routes = [
   { name: 'Portafolio', path: '/portfolio' },
   // { name: 'Servicios', path: '/services' },
   { name: 'Acerca', path: '/about' },
-  { name: 'Contacto', path: '/contact' },
+  { name: 'Contacto', path: '/contact' }
 ]
 
 const Header = () => {
@@ -20,9 +20,10 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="  sticky md:flex  top-0 left-0 z-40 lg:h-[80px] md:justify-center bg-blackBlue shadow-sm shadow-customTheme-300/50">
+    // Header desktop
+    <header className="  sticky md:flex  top-0 left-0 z-40 lg:h-[80px] md:justify-center bg-transparent shadow-sm shadow-customTheme-300/10 bg-blackBlue xl:bg-blackBlue/90">
       <div
-        className={`py-4 md:px-8 md:relative 2xl:px-0 absolute md:flex w-full items-center lg:max-w-[1200px] xl:max-w-[1350px] bg-blackBlue h-screen md:h-fit lg:h-[80px] gap-4 duration-200 ${
+        className={`py-4 md:px-8 bg-blackBlue md:relative 2xl:px-0 absolute md:flex w-full items-center lg:max-w-[1200px] xl:max-w-[1350px] xl:bg-transparent h-screen md:h-fit lg:h-[80px] gap-4 duration-200 ${
           menuOpen ? 'translate-x-0' : '-translate-x-full md:-translate-x-0'
         }`}
       >
@@ -31,8 +32,13 @@ const Header = () => {
             href="/"
             className=" flex-grow flex items-center justify-center py-4 gap-2  w-[200px] md:w-auto flex-shrink-0"
           >
-            <h2 className="!font-extrabold m-0 text-2xl text-customTheme-50">LUIS </h2>
-            <h2 className="!font-extrabold m-0 hover:mt-4 duration-200 text-customTheme-500  text-2xl"> AGUILAR</h2>
+            <h2 className="!font-extrabold m-0 text-2xl text-customTheme-50">
+              LUIS{' '}
+            </h2>
+            <h2 className="!font-extrabold m-0 hover:mt-4 duration-200 text-customTheme-500  text-2xl">
+              {' '}
+              AGUILAR
+            </h2>
           </Link>
           <button
             className={`flex h-fit btn md:hidden  z-50 items-center aspect-square `}
@@ -65,16 +71,26 @@ const Header = () => {
 
       {/* Header mobile */}
       <div
-        className={`md:!hidden  bg-blackBlue items-center justify-between px-4 py-4 ${menuOpen ? '!hidden' : '!flex'} `}
+        className={`md:!hidden  bg-blackBlue items-center justify-between px-4 py-4 ${
+          menuOpen ? '!hidden' : '!flex'
+        } `}
       >
         <Link
           href="/"
           className=" flex-grow flex items-center justify-center py-4 gap-2 text-2xl font-extrabold w-[200px] md:w-auto"
         >
-          <h2 className="!font-extrabold m-0 text-xl text-customTheme-50">LUIS </h2>
-          <h2 className="!font-extrabold m-0 hover:mt-4 duration-200 text-customTheme-500  text-2xl"> AGUILAR</h2>
+          <h2 className="!font-extrabold m-0 text-xl text-customTheme-50">
+            LUIS{' '}
+          </h2>
+          <h2 className="!font-extrabold m-0 hover:mt-4 duration-200 text-customTheme-500  text-2xl">
+            {' '}
+            AGUILAR
+          </h2>
         </Link>
-        <button className={`btn aspect-square h-fit flex items-center`} onClick={() => setMenuOpen(true)}>
+        <button
+          className={`btn aspect-square h-fit flex items-center`}
+          onClick={() => setMenuOpen(true)}
+        >
           <IconMenu size="20px" />
         </button>
       </div>

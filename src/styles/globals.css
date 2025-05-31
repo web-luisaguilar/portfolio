@@ -42,6 +42,10 @@ blockquote:before {
 body {
   @apply text-customTheme-50/80 text-base font-light bg-blackBlue;
   min-height: 100dvh;
+  background-image: url('/background.png');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-blend-mode: lighten;
 }
 
 button {
@@ -95,7 +99,7 @@ h4 {
   @apply text-base font-normal mt-4 mb-0 text-customTheme-700;
 }
 hr {
-  @apply border border-customTheme-900 opacity-50 mb-8 mt-2;
+  @apply border border-customTheme-900 opacity-80 mb-8 mt-2;
 }
 
 ul ul {
@@ -129,7 +133,12 @@ textarea {
 }
 
 .animated-bg {
-  background: linear-gradient(-45deg, rgba(5, 23, 29, 0.75) 30%, rgba(5, 23, 29, 0.5) 50%, rgba(5, 23, 29, 0.75) 70%);
+  background: linear-gradient(
+    -45deg,
+    rgba(5, 23, 29, 0.75) 30%,
+    rgba(5, 23, 29, 0.5) 50%,
+    rgba(5, 23, 29, 0.75) 70%
+  );
   background-size: 600%;
   animation: bgAnimation 2500ms ease infinite;
 }
