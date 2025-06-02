@@ -42,7 +42,7 @@ blockquote:before {
 body {
   @apply text-customTheme-50/80 text-base font-light bg-blackBlue;
   min-height: 100dvh;
-  background-image: url('/background.png');
+  background-image: url('/background.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-blend-mode: difference;
